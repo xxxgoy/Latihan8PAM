@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         adapter = UserAdapter(emptyList())
         recyclerView.adapter = adapter
 
-        // Mendapatkan data pengguna dari database Room
         Thread {
             val userDao = MyApp.database.userDao()
             val users = userDao.getAllUsers()
